@@ -1,32 +1,56 @@
-# React + TypeScript + Vite
+# Gtech Web Solutions Corporate Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A bespoke, high-performance corporate landing page custom-engineered for **Gtech Web Solutions Pvt Ltd**. This website showcases the company's enterprise software suite, co-operative society, and custom banking ERP solutions using a modern design system and high-fidelity interactive user experiences.
 
-Currently, two official plugins are available:
+## Core Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Premium Glassmorphic Design**: Frosted glass containers and cards with tailored blur diffusion profiles (`backdrop-blur-xl`), border outlines, and dynamically positioned background glow blobs for realistic visual refraction.
+- **GSAP Bidirectional Animation Engine**: Custom-coded scroll triggers that dynamically play transitions on scroll-down and automatically reverse/reset them on scroll-up for a seamless, fluid navigation experience.
+- **3D Mouse Parallax & Tilt**: An interactive 3D perspective tilt effect on key panels, utilizing relative coordinate tracking to shift design layers at different depth rates based on cursor position.
+- **Liquid Wave & Elastic Staggers**: A continuously morphing SVG wave pattern at the footer edge, paired with staggered elastic spring reveal animations that trigger fluidly.
+- **Magnetic Card Interactions**: Mouse-tracking magnetic pull effects on card contents, dynamically attracting icons and headings towards the cursor.
 
-## React Compiler
+## Technical Architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The website is built with a lightweight, optimized modern stack for maximum speed and accessibility:
 
-## Expanding the Oxlint configuration
+- **Core**: React & TypeScript
+- **Bundler**: Vite (fully optimized with hot module replacement)
+- **Styling**: Tailwind CSS (utility-first system)
+- **Animation Framework**: GSAP (GreenSock Animation Platform) & ScrollTrigger
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Local Development & Deployment
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+Follow these instructions to run the project locally on your machine.
+
+### Prerequisites
+
+Ensure you have **Node.js** (v18 or higher) installed on your system.
+
+### Installation
+
+Clone the repository, navigate to the project directory, and install the package dependencies:
+
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Running the Development Server
+
+Start the local development server to run the application with live reload (HMR):
+
+```bash
+npm run dev
+```
+
+Once running, open your browser and navigate to the address shown in the terminal (usually `http://localhost:5173`).
+
+### Building for Production
+
+To compile and optimize the website for production deployment:
+
+```bash
+npm run build
+```
+
+This compiles TypeScript, bundles all assets, and outputs a highly optimized build folder to `/dist` ready for static hosting (Vercel, Netlify, Cloudflare Pages, or traditional servers).
